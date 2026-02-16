@@ -8,6 +8,7 @@
 
   --trillia-mist: #e0f1ef;
   --trillia-lime: #83fb71;
+  --trillia-lime-2: #37b32c;
   --trillia-indigo: #1b1b96;
   --trillia-dark: #001827;
   --trillia-light: #f7f7f7;
@@ -50,29 +51,43 @@
   } */
 
 
-  /* ===== Syntax ===== */
-  --jp-mirror-editor-property-color:  var(--trillia-blue-3);  /* self, cls */
-  --jp-mirror-editor-keyword-color:  #004eff;  /* import, if, try */
-  --jp-mirror-editor-def-color:      #1b1b96;  /* def nome_funcao */
-  --jp-mirror-editor-variable-color: #0a2531;  /* variáveis */
-  --jp-mirror-editor-number-color:   #3363e9;  /* 123 */
-  --jp-mirror-editor-string-color:   #0c9779;  /* strings mais elegantes */
-  --jp-mirror-editor-string-2-color: #01a329;  /* strings mais elegantes */
-  --jp-mirror-editor-comment-color:  #687685;  /* comentários suaves */
-  --jp-mirror-editor-builtin-color:  #004eff;  /* print, len */
-  --jp-mirror-editor-operator-color: #041c35;  /* + - = / */
+  /* Acentos (mude só isso pra “trocar de tema”) */
+  --hl-accent: #eb2525;     /* azul moderno */
+  --hl-accent-2: #7c3aed;   /* roxo/indigo */
 
-  /* HTML / Markdown */
-  --jp-mirror-editor-tag-color:       #004eff;
-  --jp-mirror-editor-attribute-color: #1b1b96;
+  /* Neutros */
+  --hl-fg: #0f172a;         /* texto principal */
+  --hl-fg-2: #334155;       /* secundário */
+  --hl-muted: #64748b;      /* comentário */
+  --hl-border: rgb(15 23 42 / 0.10);
 
-  /* Errors */
-  --jp-mirror-editor-error-color: #d7263d;
+  /* Literais */
+  --hl-string: var(--trillia-blue-2);     /* teal sofisticado */
+  --hl-number: var(--trillia-lime-2);     /* âmbar queimado */
+  --hl-const:  #7c3aed;     /* const/builtin */
 
-  /* ===== Interaction ===== */
+  /* Feedback */
+  --hl-error: #dc2626;
+  --hl-warning: #d97706;
 
-  --jp-editor-selected-background: rgb(0 78 255 / 0.18);
-  --jp-editor-active-line-background: rgb(131 251 113 / 0.10);
-  --jp-editor-matching-bracket-color: rgb(0 78 255 / 0.28);
+  /* ===== TOKENS (JupyterLab vars) ===== */
+  --jp-mirror-editor-keyword-color:   var(--trillia-blue-4);   /* if, import, try */
+  --jp-mirror-editor-def-color:       var(--trillia-indigo);       /* nome de defs: discreto e “pro” */
+  --jp-mirror-editor-variable-color:  var(--trillia-blue-3);       /* identificadores */
+  --jp-mirror-editor-builtin-color:   var(--trillia-blue-3);    /* True/None/print */
+  --jp-mirror-editor-number-color:    var(--hl-number);   /* 123 */
+  --jp-mirror-editor-string-color:    var(--hl-string);   /* "texto" */
+  --jp-mirror-editor-string-2-color:    var(--hl-string);   /* "texto" */
+  --jp-mirror-editor-comment-color:   var(--hl-muted);    /* # comentário */
+  --jp-mirror-editor-operator-color:  var(--trillia-blue-3);     /* = + - */
+
+  --jp-mirror-editor-tag-color:       var(--hl-accent);
+  --jp-mirror-editor-attribute-color: var(--trillia-blue-3);
+  --jp-mirror-editor-error-color:     var(--hl-error);
+
+  /* ===== INTERAÇÃO ===== */
+  --jp-editor-selected-background:        rgb(37 99 235 / 0.16);
+  --jp-editor-active-line-background:     rgb(15 23 42 / 0.035);
+  --jp-editor-matching-bracket-color:     rgb(37 99 235 / 0.22);
 
 }
