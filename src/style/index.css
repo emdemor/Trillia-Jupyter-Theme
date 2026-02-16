@@ -11,5 +11,15 @@
 .jp-RenderedHTMLCommon h5,
 .jp-RenderedHTMLCommon h6 {
   font-family: var(--trillia-font-family-heading);
-  color: #004EFF;
+  color: var(--trillia-blue-4);
+}
+
+/* Cor do ícone do notebook */
+.jp-notebook-icon-color[fill],
+.jp-notebook-icon-color {
+  fill: var(--trillia-blue-4)!important;
+}
+
+.jp-notebook-icon-color[stroke] {
+  stroke: var(--trillia-blue-4) !important;
 }
