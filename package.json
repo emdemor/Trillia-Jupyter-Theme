@@ -20,7 +20,7 @@
   "scripts": {
     "build": "jlpm run build:lib && jlpm run build:style",
     "build:lib": "tsc",
-    "build:style": "jupyter labextension build .",
+    "build:style": "node ./scripts/ensure_style.js && jupyter labextension build .",
     "clean": "rimraf lib style",
     "watch": "tsc -w"
   },
