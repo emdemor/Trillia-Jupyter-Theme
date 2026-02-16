@@ -6,11 +6,17 @@
   --trillia-blue-3: #2f73ff;
   --trillia-blue-4: #1d4ed8;
 
+  --trillia-font-text: "B3 Sans Text", "Manrope", "Avenir Next", "Segoe UI", Helvetica, Arial, sans-serif;
+  --trillia-font-display: "B3 Sans Display", "Manrope", "Avenir Next", "Segoe UI", Helvetica, Arial, sans-serif;
+
   --jp-brand-color0: var(--trillia-blue-4);
   --jp-brand-color1: var(--trillia-blue-3);
   --jp-brand-color2: var(--trillia-blue-2);
 
   --jp-accent-color0: var(--trillia-blue-4);
+
+  --jp-ui-font-family: var(--trillia-font-text);
+  --jp-content-font-family: var(--trillia-font-text);
 
   /* --jp-border-width: 1px;
   --jp-border-radius: 10px; */

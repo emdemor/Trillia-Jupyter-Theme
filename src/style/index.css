@@ -2,6 +2,54 @@
 @import url("./variables.css");
 @import url("./icons.css");
 
+@font-face {
+  font-family: "B3 Sans Display";
+  src: url("./assets/B3-sans-font/Display/WEB/B3SansDisplay-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "B3 Sans Display";
+  src: url("./assets/B3-sans-font/Display/WEB/B3SansDisplay-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "B3 Sans Text";
+  src: url("./assets/B3-sans-font/Text/WEB/B3SansText-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "B3 Sans Text";
+  src: url("./assets/B3-sans-font/Text/WEB/B3SansText-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "B3 Sans Text";
+  src: url("./assets/B3-sans-font/Text/WEB/B3SansText-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "B3 Sans Text";
+  src: url("./assets/B3-sans-font/Text/WEB/B3SansText-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Markdown cell headers */
 .jp-RenderedHTMLCommon h1,
 .jp-RenderedHTMLCommon h2,
@@ -9,5 +57,6 @@
 .jp-RenderedHTMLCommon h4,
 .jp-RenderedHTMLCommon h5,
 .jp-RenderedHTMLCommon h6 {
-  color: #004EFF;
+  font-family: var(--trillia-font-display);
+  color: var(--jp-brand-color2);
 }
