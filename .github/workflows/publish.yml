@@ -67,6 +67,12 @@ jobs:
           jlpm run build
           ./scripts/prepare_labextension.sh
 
+      - name: Validate packaged labextension files
+        run: |
+          test -f jupyterlab_trillia_theme/labextension/package.json
+          ls jupyterlab_trillia_theme/labextension/static/remoteEntry*.js >/dev/null
+          test -f jupyterlab_trillia_theme/labextension/themes/jupyterlab-trillia-theme/index.css
+
       - name: Build Python package
         run: |
           python -m pip install --upgrade build
