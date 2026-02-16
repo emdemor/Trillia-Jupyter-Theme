@@ -1,4 +1,4 @@
-.PHONY: help install build prepare sync pip-install dev update clean
+.PHONY: help install build prepare sync pip-install dev update clean docker-build start
 
 help:
 	@echo "Targets:"
@@ -10,6 +10,8 @@ help:
 	@echo "  update       - build + prepare + sync"
 	@echo "  dev          - install + update"
 	@echo "  clean        - remove generated artifacts"
+	@echo "  docker-build - build JupyterLab 4.5.4 image with Trillia theme"
+	@echo "  start        - run container with examples mounted"
 
 install:
 	jlpm install
@@ -32,3 +34,9 @@ dev: install update
 
 clean:
 	rm -rf lib style jupyterlab_trillia_theme/labextension static node_modules .yarn .pnp.cjs .pnp.loader.mjs
+
+docker-build:
+	docker build -f docker/Dockerfile -t trillia-jlab:4.5.4 .
+
+start:
+	docker run --rm -p 8888:8888 -v $(PWD)/examples:/workspace/examples trillia-jlab:4.5.4
