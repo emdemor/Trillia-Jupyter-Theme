@@ -1,6 +1,6 @@
 {
   "name": "jupyterlab-trillia-theme",
-  "version": "0.1.0",
+  "version": "0.1.7",
   "description": "Trillia theme for JupyterLab 4",
   "keywords": [
     "jupyter",
