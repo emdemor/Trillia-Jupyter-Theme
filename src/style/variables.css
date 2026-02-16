@@ -6,6 +6,12 @@
   --trillia-blue-3: #2f73ff;
   --trillia-blue-4: #1d4ed8;
 
+  --trillia-mist: #e0f1ef;
+  --trillia-lime: #83fb71;
+  --trillia-indigo: #1b1b96;
+  --trillia-dark: #001827;
+
+
   --jp-brand-color0: var(--trillia-blue-4);
   --jp-brand-color1: var(--trillia-blue-3);
   --jp-brand-color2: var(--trillia-blue-2);
@@ -13,6 +19,8 @@
   --jp-accent-color0: var(--trillia-blue-4);
 
   --trillia-font-family-heading: "BeeTreeSans", "Segoe UI", "Helvetica Neue",
+    Arial, sans-serif;
+  --trillia-font-family-body: "BeeTreeSansText", "Segoe UI", "Helvetica Neue",
     Arial, sans-serif;
 
   /* --jp-border-width: 1px;

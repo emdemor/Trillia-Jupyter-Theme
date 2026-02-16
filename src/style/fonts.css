@@ -15,3 +15,21 @@
   font-weight: 700;
   font-display: swap;
 }
+
+@font-face {
+  font-family: "BeeTreeSansText";
+  src: url("./beetree-sans-font/Display/WEB/BeeTreeSansText-Regular.woff2")
+    format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BeeTreeSansText";
+  src: url("./beetree-sans-font/Display/WEB/BeeTreeSansText-Bold.woff2")
+    format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
