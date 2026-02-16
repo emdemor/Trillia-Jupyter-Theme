@@ -4,20 +4,74 @@
   --trillia-blue-1: #9fbfff;
   --trillia-blue-2: #6a9bff;
   --trillia-blue-3: #2f73ff;
-  --trillia-blue-4: #1d4ed8;
+  --trillia-blue-4: #004eff;
+  --trillia-blue-5: #1b1b96;
 
-  --trillia-border-w: 2px;
-  --trillia-border-white: rgba(255, 255, 255, 0.9);
+  --trillia-body-text: #001728;
+  --trillia-mist: #e0f1ef;
+  --trillia-lime: #83fb71;
+  --trillia-indigo: #1b1b96;
+
+  --trillia-font-text: "B3 Sans Text", "Manrope", "Avenir Next", "Segoe UI", Helvetica, Arial, sans-serif;
+  --trillia-font-display: "B3 Sans Display", "Manrope", "Avenir Next", "Segoe UI", Helvetica, Arial, sans-serif;
 
   /* mapeando para tokens do JupyterLab */
-  --jp-brand-color0: var(--trillia-blue-4);
-  --jp-brand-color1: var(--trillia-blue-3);
+  --jp-brand-color0: var(--trillia-blue-0);
+  --jp-brand-color1: var(--trillia-blue-1);
   --jp-brand-color2: var(--trillia-blue-2);
+  --jp-brand-color3: var(--trillia-blue-3);
+  --jp-brand-color4: var(--trillia-blue-4);
 
-  --jp-accent-color0: var(--trillia-blue-4);
-  --jp-ui-font-family: "B3 Sans Display", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  --jp-accent-color0: #dbe7ff;
+  --jp-accent-color1: #bfd3ff;
+  --jp-accent-color2: #8eb2ff;
+  --jp-accent-color3: #4f86ff;
+
+  --jp-warn-color0: #dbe7ff;
+  --jp-warn-color1: #bfd3ff;
+  --jp-warn-color2: #8eb2ff;
+  --jp-warn-color3: #4f86ff;
+
+  --jp-icon-accent0: #dbe7ff;
+  --jp-icon-accent1: #bfd3ff;
+  --jp-icon-accent2: #8eb2ff;
+  --jp-icon-accent3: #4f86ff;
+  --jp-icon-accent4: #004eff;
+
+  --jp-ui-font-family: var(--trillia-font-display);
+  --jp-content-font-family: var(--trillia-font-text);
 
   /* bordas e radius */
   --jp-border-width: 1px;
   --jp-border-radius: 10px;
+
+  --jp-cell-editor-active-border-color: var(--trillia-blue-3);
+  --jp-input-active-border-color: var(--trillia-lime);
+
+  --trillia-tab-radius: 10px;
+}
+
+body[data-jp-theme-light="false"],
+body[data-jp-theme-name="JupyterLab Dark"] {
+  --jp-brand-color0: #8fb1ff;
+  --jp-brand-color1: #7aa3ff;
+  --jp-brand-color2: #5f93ff;
+  --jp-brand-color3: #3f7eff;
+  --jp-brand-color4: #2d68f4;
+
+  --jp-accent-color0: #8fb1ff;
+  --jp-accent-color1: #7aa3ff;
+  --jp-accent-color2: #5f93ff;
+  --jp-accent-color3: #3f7eff;
+
+  --jp-warn-color0: #8fb1ff;
+  --jp-warn-color1: #7aa3ff;
+  --jp-warn-color2: #5f93ff;
+  --jp-warn-color3: #3f7eff;
+
+  --jp-icon-accent0: #8fb1ff;
+  --jp-icon-accent1: #7aa3ff;
+  --jp-icon-accent2: #5f93ff;
+  --jp-icon-accent3: #3f7eff;
+  --jp-icon-accent4: #2d68f4;
 }

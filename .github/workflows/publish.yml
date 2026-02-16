@@ -1,0 +1,61 @@
+name: Publish
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Sync version from Python package
+        run: |
+          python - <<'PY'
+          import pathlib
+          import re
+
+          init_path = pathlib.Path("jupyterlab_trillia_theme/__init__.py")
+          text = init_path.read_text()
+          match = re.search(r'__version__\s*=\s*"([^"]+)"', text)
+          if not match:
+              raise SystemExit("__version__ not found in jupyterlab_trillia_theme/__init__.py")
+          version = match.group(1)
+
+          pyproject = pathlib.Path("pyproject.toml")
+          py_text = pyproject.read_text()
+          py_text = re.sub(r'^version\s*=\s*"[^"]+"', f'version = "{version}"', py_text, flags=re.M)
+          pyproject.write_text(py_text)
+
+          print(f"Synced version: {version}")
+          PY
+
+      - name: Build labextension assets
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install jupyterlab
+          jlpm install
+          jlpm run build
+          ./scripts/prepare_labextension.sh
+
+      - name: Build Python package
+        run: |
+          python -m pip install --upgrade build
+          python -m build
+
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          password: ${{ secrets.PYPI_API_TOKEN }}

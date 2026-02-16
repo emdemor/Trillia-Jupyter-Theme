@@ -1,8 +1,47 @@
-/* Fonte (se quiser embutir via /custom, ok) */
 @font-face {
   font-family: "B3 Sans Display";
-  src: url("/custom/B3-sans-font/Display/WEB/B3SansDisplay-Regular.woff2") format("woff2");
+  src: url("./assets/B3-sans-font/Display/WEB/B3SansDisplay-Regular.woff2") format("woff2");
   font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "B3 Sans Display";
+  src: url("./assets/B3-sans-font/Display/WEB/B3SansDisplay-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "B3 Sans Text";
+  src: url("./assets/B3-sans-font/Text/WEB/B3SansText-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "B3 Sans Text";
+  src: url("./assets/B3-sans-font/Text/WEB/B3SansText-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "B3 Sans Text";
+  src: url("./assets/B3-sans-font/Text/WEB/B3SansText-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "B3 Sans Text";
+  src: url("./assets/B3-sans-font/Text/WEB/B3SansText-Bold.woff2") format("woff2");
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -10,8 +49,145 @@
 @import url("./variables.css");
 @import url("./icons.css");
 
-/* Exemplo: dar o “hard-border” que você comentou */
+.jp-RenderedHTMLCommon h1,
+.jp-RenderedHTMLCommon h2,
+.jp-RenderedHTMLCommon h3,
+.jp-RenderedHTMLCommon h4,
+.jp-RenderedHTMLCommon h5,
+.jp-RenderedHTMLCommon h6 {
+  font-family: var(--trillia-font-display);
+  color: var(--jp-icon-accent4);
+}
+
+.jp-RenderedHTMLCommon h1 {
+  font-size: clamp(2.15rem, 1.28rem + 2.5vw, 3.35rem);
+  font-weight: 800;
+}
+
+.jp-RenderedHTMLCommon h1 code {
+  font-size: 0.72em;
+  font-weight: 700;
+  color: var(--trillia-indigo);
+}
+
+/* Texto “normal” no Markdown (sem afetar títulos) */
+.jp-RenderedHTMLCommon {
+  color: var(--trillia-body-text) !important;
+  font-family: var(--trillia-font-text) !important;
+}
+
+/* Mantém code blocks/inline code com fonte monoespaçada */
+.jp-RenderedHTMLCommon pre,
+.jp-RenderedHTMLCommon code,
+.jp-RenderedHTMLCommon kbd,
+.jp-RenderedHTMLCommon samp {
+  font-family: var(--jp-code-font-family) !important;
+}
+
+/* JupyterLab top-left logo replacement */
+.jp-SideBar .jp-Logo svg,
+.jp-SideBar .jp-Logo .jp-icon3,
+#jp-MainLogo svg {
+  display: none !important;
+}
+
+.jp-SideBar .jp-Logo,
+#jp-MainLogo {
+  width: 28px !important;
+  min-width: 28px !important;
+  height: 28px !important;
+  min-height: 28px !important;
+  border-radius: 0px;
+  background: rgb(0 78 255 / 0%) url("./assets/logo.svg") center / 20px 20px no-repeat !important;
+}
+
+/* Base moderna para célula de input */
 .jp-InputArea-editor {
-  border: 1px solid rgba(0, 0, 0, 0.12) !important;
-  border-radius: 14px !important;
+  padding-top: 5px !important;
+  border-radius: 5px !important;
+  color: var(--trillia-body-text) !important;
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--trillia-mist) 25%, var(--jp-layout-color1)) 0%,
+      color-mix(in srgb, var(--trillia-mist) 40%, var(--jp-layout-color1)) 100%
+    ) !important;
+}
+
+/* Texto dentro do editor (CodeMirror) */
+.jp-InputArea .cm-editor,
+.jp-InputArea .cm-content {
+  color: var(--trillia-body-text) !important;
+}
+
+/* Texto de saída (outputs) */
+.jp-OutputArea,
+.jp-OutputArea-output,
+.jp-OutputArea-output pre,
+.jp-OutputArea-output code,
+.jp-RenderedText,
+.jp-RenderedText pre {
+  color: var(--trillia-body-text) !important;
+}
+
+/* Aba padrão (mantém layout nativo; só arredonda e refina cores) */
+.jp-DockPanel .lm-TabBar-tab,
+.lm-DockPanel .lm-TabBar-tab {
+  border-top-left-radius: var(--trillia-tab-radius) !important;
+  border-top-right-radius: var(--trillia-tab-radius) !important;
+  background-clip: padding-box;
+  overflow: hidden;
+}
+
+.jp-DockPanel .lm-TabBar-tab:hover,
+.lm-DockPanel .lm-TabBar-tab:hover {
+  background: color-mix(in srgb, var(--jp-layout-color2) 92%, var(--jp-layout-color1)) !important;
+}
+
+/* Aba ativa: “cartão” em cima da borda inferior */
+.jp-DockPanel .lm-TabBar-tab.lm-mod-current,
+.lm-DockPanel .lm-TabBar-tab.lm-mod-current {
+  background: var(--jp-layout-color0) !important;
+  box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
+}
+
+/* Evita recortes/“orelhas” de temas que usam pseudo-elementos para bordas */
+.jp-DockPanel .lm-TabBar-tab::before,
+.jp-DockPanel .lm-TabBar-tab::after,
+.lm-DockPanel .lm-TabBar-tab::before,
+.lm-DockPanel .lm-TabBar-tab::after {
+  display: none !important;
+}
+
+/* Botão de “+” (nova aba) – visual consistente com as abas */
+.jp-DockPanel .lm-TabBar-addButton,
+.lm-DockPanel .lm-TabBar-addButton,
+.lm-TabBar-addButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  width: 40px !important;
+  padding: 0 !important;
+  line-height: 1 !important;
+  border-radius: var(--trillia-tab-radius) var(--trillia-tab-radius) 0 0 !important;
+  background: color-mix(in srgb, var(--jp-layout-color2) 80%, var(--jp-layout-color1)) !important;
+  border: 1px solid color-mix(in srgb, var(--jp-border-color2) 65%, transparent) !important;
+  border-bottom-color: transparent !important;
+  background-clip: padding-box;
+}
+
+.jp-DockPanel .lm-TabBar-addButton .lm-TabBar-addIcon,
+.lm-DockPanel .lm-TabBar-addButton .lm-TabBar-addIcon,
+.lm-TabBar-addButton .lm-TabBar-addIcon {
+  width: 100%;
+  height: 100%;
+  margin: 0 !important;
+  background-position: center !important;
+}
+
+.jp-DockPanel .lm-TabBar-addButton:hover,
+.lm-DockPanel .lm-TabBar-addButton:hover,
+.lm-TabBar-addButton:hover {
+  background: color-mix(in srgb, var(--jp-layout-color2) 92%, var(--jp-layout-color1)) !important;
 }

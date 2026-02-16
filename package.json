@@ -15,8 +15,7 @@
   "style": "style/index.css",
   "files": [
     "lib/**/*.{js,d.ts,js.map}",
-    "style/index.css",
-    "style/*.css"
+    "style/**/*"
   ],
   "scripts": {
     "build": "jlpm run build:lib && jlpm run build:style",

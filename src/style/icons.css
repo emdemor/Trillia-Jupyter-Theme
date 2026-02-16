@@ -13,3 +13,27 @@
   fill: currentColor !important;
   stroke: currentColor !important;
 }
+
+.jp-icon-accent0,
+.jp-icon-accent1,
+.jp-icon-accent2,
+.jp-icon-accent3,
+.jp-icon-accent4 {
+  fill: var(--jp-icon-accent4) !important;
+  stroke: var(--jp-icon-accent4) !important;
+  color: var(--jp-icon-accent4) !important;
+}
+
+/* Cor do ícone do notebook */
+.jp-notebook-icon-color[fill],
+.jp-notebook-icon-color {
+  fill: var(--jp-icon-accent4) !important;
+}
+
+.jp-notebook-icon-color[stroke] {
+  stroke: var(--jp-icon-accent4) !important;
+}
+
+.jp-RunningSessions-shutdownAll.jp-ToolbarButtonComponent {
+  color: var(--jp-icon-accent4) !important;
+}
