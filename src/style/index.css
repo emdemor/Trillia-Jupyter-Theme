@@ -33,3 +33,45 @@
 .jp-notebook-icon-color[stroke] {
   stroke: var(--trillia-blue-4) !important;
 }
+
+
+/* Cor do ícone do terminal */
+.jp-RunningSessions-shutdownAll.jp-ToolbarButtonComponent {
+  color: var(--trillia-lime)  !important;
+}
+
+/* Base moderna para célula de input */
+.jp-InputArea-editor {
+  flex: 1 1 auto !important;
+  overflow: hidden !important;
+  border-radius: 8px !important;
+  background: var(--jp-cell-editor-background) !important;
+  padding-top: 5px !important;
+}
+
+.jp-Notebook.jp-mod-editMode .jp-Cell.jp-mod-active .jp-InputArea-editor {
+    border: var(--jp-border-width) solid var(--trillia-lime) !important;
+    box-shadow: var(--jp-cell-editor-box-shadow) !important;
+    background-color: var(--jp-cell-editor-active-background) !important;
+}
+
+/* Cor da barra esquerda de seleção */
+.jp-Notebook .jp-Cell.jp-mod-active .jp-Collapser {
+    background: var(--trillia-blue-4) !important;
+}
+
+.jp-Notebook .jp-Cell.jp-mod-active .jp-Collapser:hover {
+    background: var(--trillia-indigo) !important;
+    opacity: 1;
+}
+
+/* =========================
+   1) Prompt [2]: (entrada e saída)
+   ========================= */
+.jp-InputPrompt {
+  color: var(--trillia-blue-4) !important;
+}
+
+.jp-OutputPrompt {
+  color: var(--trillia-lime) !important;
+}

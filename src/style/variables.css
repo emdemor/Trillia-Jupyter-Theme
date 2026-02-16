@@ -10,19 +10,69 @@
   --trillia-lime: #83fb71;
   --trillia-indigo: #1b1b96;
   --trillia-dark: #001827;
-
-
-  --jp-brand-color0: var(--trillia-blue-4);
-  --jp-brand-color1: var(--trillia-blue-3);
-  --jp-brand-color2: var(--trillia-blue-2);
-
-  --jp-accent-color0: var(--trillia-blue-4);
+  --trillia-light: #f7f7f7;
+  --trillia-light-gray: #e5f0f0;
 
   --trillia-font-family-heading: "BeeTreeSans", "Segoe UI", "Helvetica Neue",
     Arial, sans-serif;
   --trillia-font-family-body: "BeeTreeSansText", "Segoe UI", "Helvetica Neue",
     Arial, sans-serif;
 
-  /* --jp-border-width: 1px;
-  --jp-border-radius: 10px; */
+
+  --jp-brand-color0: var(--trillia-blue-4);
+  --jp-brand-color1: var(--trillia-blue-3);
+  --jp-brand-color2: var(--trillia-blue-2);
+  --jp-accent-color0: var(--trillia-blue-4);
+
+  --jp-layout-color0: var(--trillia-light);
+
+  --jp-editor-background: var(--trillia-light-gray);
+  --jp-editor-cursor-color: var(--trillia-blue-4);
+  /*--jp-inverse-layout-color3: var(--trillia-dark); /*cor dos ícones*/
+  /* --jp-cell-editor-active-border-color: var(--trillia-lime); */
+
+
+
+  --jp-cell-padding: 5px;
+  --jp-cell-collapser-width: 8px;
+  --jp-cell-collapser-min-height: 20px;
+  --jp-cell-collapser-not-active-hover-opacity: 0.6;
+  --jp-cell-editor-background: var(--trillia-light);
+  --jp-cell-editor-box-shadow: inset 0 0 4px rgb(var(--trillia-lime) / 0.4);
+  --jp-code-font-family: "JetBrains Mono", monospace;
+
+  /* --jp-rendermime-error-background: cor do background do output de erro */
+  
+  /* Cor do texto do output de erro */
+  /* --jp-rendermime-error-color: #ff0000; */
+  /* .jp-RenderedText pre .ansi-red-fg {
+    color: #0f9f4abd;
+  } */
+
+
+  /* ===== Syntax ===== */
+  --jp-mirror-editor-property-color:  var(--trillia-blue-3);  /* self, cls */
+  --jp-mirror-editor-keyword-color:  #004eff;  /* import, if, try */
+  --jp-mirror-editor-def-color:      #1b1b96;  /* def nome_funcao */
+  --jp-mirror-editor-variable-color: #0a2531;  /* variáveis */
+  --jp-mirror-editor-number-color:   #3363e9;  /* 123 */
+  --jp-mirror-editor-string-color:   #0c9779;  /* strings mais elegantes */
+  --jp-mirror-editor-string-2-color: #01a329;  /* strings mais elegantes */
+  --jp-mirror-editor-comment-color:  #687685;  /* comentários suaves */
+  --jp-mirror-editor-builtin-color:  #004eff;  /* print, len */
+  --jp-mirror-editor-operator-color: #041c35;  /* + - = / */
+
+  /* HTML / Markdown */
+  --jp-mirror-editor-tag-color:       #004eff;
+  --jp-mirror-editor-attribute-color: #1b1b96;
+
+  /* Errors */
+  --jp-mirror-editor-error-color: #d7263d;
+
+  /* ===== Interaction ===== */
+
+  --jp-editor-selected-background: rgb(0 78 255 / 0.18);
+  --jp-editor-active-line-background: rgb(131 251 113 / 0.10);
+  --jp-editor-matching-bracket-color: rgb(0 78 255 / 0.28);
+
 }
