@@ -12,6 +12,9 @@
 
   --jp-accent-color0: var(--trillia-blue-4);
 
+  --trillia-font-family-heading: "BeeTreeSans", "Segoe UI", "Helvetica Neue",
+    Arial, sans-serif;
+
   /* --jp-border-width: 1px;
   --jp-border-radius: 10px; */
 }

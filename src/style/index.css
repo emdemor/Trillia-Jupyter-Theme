@@ -1,4 +1,5 @@
 @import url("@jupyterlab/theme-light-extension/style/theme.css");
+@import url("./fonts.css");
 @import url("./variables.css");
 @import url("./icons.css");
 
@@ -9,5 +10,6 @@
 .jp-RenderedHTMLCommon h4,
 .jp-RenderedHTMLCommon h5,
 .jp-RenderedHTMLCommon h6 {
+  font-family: var(--trillia-font-family-heading);
   color: #004EFF;
 }
