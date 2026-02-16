@@ -1,0 +1,40 @@
+{
+  "name": "jupyterlab-trillia-theme",
+  "version": "0.1.0",
+  "description": "Trillia theme for JupyterLab 4",
+  "keywords": [
+    "jupyter",
+    "jupyterlab",
+    "jupyterlab-extension",
+    "theme"
+  ],
+  "license": "BSD-3-Clause",
+  "author": "Eduardo",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "style": "style/index.css",
+  "files": [
+    "lib/**/*.{js,d.ts,js.map}",
+    "style/index.css",
+    "style/*.css"
+  ],
+  "scripts": {
+    "build": "jlpm run build:lib && jlpm run build:style",
+    "build:lib": "tsc",
+    "build:style": "node ./node_modules/@jupyterlab/builder/lib/build-labextension.js",
+    "clean": "rimraf lib style",
+    "watch": "tsc -w"
+  },
+  "dependencies": {
+    "@jupyterlab/apputils": "^4.0.0"
+  },
+  "devDependencies": {
+    "@jupyterlab/builder": "^4.0.0",
+    "rimraf": "^6.0.0",
+    "typescript": "^5.0.0"
+  },
+  "jupyterlab": {
+    "extension": true,
+    "themePath": "style/index.css"
+  }
+}

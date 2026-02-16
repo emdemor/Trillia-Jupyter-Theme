@@ -1,0 +1,23 @@
+:root {
+  /* seus tokens */
+  --trillia-blue-0: #cfe0ff;
+  --trillia-blue-1: #9fbfff;
+  --trillia-blue-2: #6a9bff;
+  --trillia-blue-3: #2f73ff;
+  --trillia-blue-4: #1d4ed8;
+
+  --trillia-border-w: 2px;
+  --trillia-border-white: rgba(255, 255, 255, 0.9);
+
+  /* mapeando para tokens do JupyterLab */
+  --jp-brand-color0: var(--trillia-blue-4);
+  --jp-brand-color1: var(--trillia-blue-3);
+  --jp-brand-color2: var(--trillia-blue-2);
+
+  --jp-accent-color0: var(--trillia-blue-4);
+  --jp-ui-font-family: "B3 Sans Display", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+
+  /* bordas e radius */
+  --jp-border-width: 1px;
+  --jp-border-radius: 10px;
+}

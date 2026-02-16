@@ -1,0 +1,17 @@
+/* Fonte (se quiser embutir via /custom, ok) */
+@font-face {
+  font-family: "B3 Sans Display";
+  src: url("/custom/B3-sans-font/Display/WEB/B3SansDisplay-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@import url("./variables.css");
+@import url("./icons.css");
+
+/* Exemplo: dar o “hard-border” que você comentou */
+.jp-InputArea-editor {
+  border: 1px solid rgba(0, 0, 0, 0.12) !important;
+  border-radius: 14px !important;
+}

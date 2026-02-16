@@ -1,0 +1,5 @@
+{
+  "packageManager": "python",
+  "packageName": "jupyterlab_trillia_theme",
+  "uninstallInstructions": "pip uninstall jupyterlab_trillia_theme"
+}

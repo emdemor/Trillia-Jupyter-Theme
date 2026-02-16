@@ -1,0 +1,15 @@
+/* Ícones do Lab geralmente herdam currentColor */
+.jp-ToolbarButtonComponent-icon,
+.jp-icon3,
+.jp-icon-selectable,
+.jp-Icon {
+  color: var(--jp-brand-color1) !important;
+}
+
+/* Alguns SVGs precisam disso: */
+.jp-ToolbarButtonComponent-icon svg,
+.jp-icon3 svg,
+.jp-Icon svg {
+  fill: currentColor !important;
+  stroke: currentColor !important;
+}
