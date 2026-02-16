@@ -22,23 +22,39 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Sync version from Python package
+      - name: Sync version from tag
         run: |
           python - <<'PY'
+          import os
           import pathlib
           import re
 
+          ref_name = os.environ.get("GITHUB_REF_NAME", "")
+          if not ref_name.startswith("v"):
+              raise SystemExit(f"Tag must start with 'v'. Got: {ref_name}")
+          version = ref_name[1:]
+          if not re.fullmatch(r"\d+\.\d+\.\d+", version):
+              raise SystemExit(f"Tag version must follow X.Y.Z. Got: {version}")
+
           init_path = pathlib.Path("jupyterlab_trillia_theme/__init__.py")
-          text = init_path.read_text()
-          match = re.search(r'__version__\s*=\s*"([^"]+)"', text)
-          if not match:
-              raise SystemExit("__version__ not found in jupyterlab_trillia_theme/__init__.py")
-          version = match.group(1)
+          init_text = init_path.read_text()
+          init_text = re.sub(
+              r'^__version__\s*=\s*"[^"]+"',
+              f'__version__ = "{version}"',
+              init_text,
+              flags=re.M,
+          )
+          init_path.write_text(init_text)
 
           pyproject = pathlib.Path("pyproject.toml")
           py_text = pyproject.read_text()
           py_text = re.sub(r'^version\s*=\s*"[^"]+"', f'version = "{version}"', py_text, flags=re.M)
           pyproject.write_text(py_text)
+
+          package_json = pathlib.Path("package.json")
+          pkg_text = package_json.read_text()
+          pkg_text = re.sub(r'"version"\s*:\s*"[^"]+"', f'"version": "{version}"', pkg_text, count=1)
+          package_json.write_text(pkg_text)
 
           print(f"Synced version: {version}")
           PY
