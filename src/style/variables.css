@@ -90,4 +90,7 @@
   --jp-editor-active-line-background:     rgb(15 23 42 / 0.035);
   --jp-editor-matching-bracket-color:     rgb(37 99 235 / 0.22);
 
+  /* ==== OUTPUT DE ERRO ==== */
+  --jp-rendermime-error-background: #e1e1e1;
+
 }
