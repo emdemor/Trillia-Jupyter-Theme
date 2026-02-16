@@ -20,11 +20,12 @@
   "scripts": {
     "build": "jlpm run build:lib && jlpm run build:style",
     "build:lib": "tsc",
-    "build:style": "node ./node_modules/@jupyterlab/builder/lib/build-labextension.js",
+    "build:style": "jupyter labextension build .",
     "clean": "rimraf lib style",
     "watch": "tsc -w"
   },
   "dependencies": {
+    "@jupyterlab/application": "^4.0.0",
     "@jupyterlab/apputils": "^4.0.0"
   },
   "devDependencies": {

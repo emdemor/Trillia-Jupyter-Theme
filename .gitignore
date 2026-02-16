@@ -1,1 +1,36 @@
-/examples
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+.python-version
+dist/
+build/
+
+# JupyterLab extension build
+lib/
+style/
+jupyterlab_trillia_theme/labextension/
+!src/style/
+!src/style/**
+
+# Node/Yarn
+node_modules/
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+
+# OS/Editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Examples
+/examples/

@@ -1,11 +1,11 @@
-import { JupyterFrontEndPlugin } from '@jupyterlab/application';
+import { JupyterFrontEnd, JupyterFrontEndPlugin } from '@jupyterlab/application';
 import { IThemeManager } from '@jupyterlab/apputils';
 
 const plugin: JupyterFrontEndPlugin<void> = {
   id: 'jupyterlab-trillia-theme:plugin',
   autoStart: true,
   requires: [IThemeManager],
-  activate: (app, manager: IThemeManager) => {
+  activate: (app: JupyterFrontEnd, manager: IThemeManager) => {
     const style = 'jupyterlab-trillia-theme/index.css';
 
     manager.register({
