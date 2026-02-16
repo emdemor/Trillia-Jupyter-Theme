@@ -115,7 +115,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jupyterlab/application@npm:^4.0.0":
+"@jupyterlab/application@npm:^4.0.0, @jupyterlab/application@npm:^4.5.4":
   version: 4.5.4
   resolution: "@jupyterlab/application@npm:4.5.4"
   dependencies:
@@ -393,6 +393,17 @@ __metadata:
     "@lumino/widgets": ^2.7.5
     react: ^18.2.0
   checksum: 7361b21d945544834f1f99cf54fccf5fcd26280311565068078b012db4f5f301654f4f3cbcc627216fecd50fc9960804772c57eb5ed158bcd45523c4c155c9a1
+  languageName: node
+  linkType: hard
+
+"@jupyterlab/theme-light-extension@npm:^4.0.0":
+  version: 4.5.4
+  resolution: "@jupyterlab/theme-light-extension@npm:4.5.4"
+  dependencies:
+    "@jupyterlab/application": ^4.5.4
+    "@jupyterlab/apputils": ^4.6.4
+    "@jupyterlab/translation": ^4.5.4
+  checksum: 639c45dfdc7cec2c00a1ea949d9b8cb1654494a0c7586cfd2211c6ff4ba50cc85d1c927bf097a9d6d9f2bed57c1845043d267557961939dc22f2eb177efd720c
   languageName: node
   linkType: hard
 
@@ -1818,6 +1829,7 @@ __metadata:
     "@jupyterlab/application": ^4.0.0
     "@jupyterlab/apputils": ^4.0.0
     "@jupyterlab/builder": ^4.0.0
+    "@jupyterlab/theme-light-extension": ^4.0.0
     rimraf: ^6.0.0
     typescript: ^5.0.0
   languageName: unknown

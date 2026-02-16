@@ -1,12 +1,13 @@
-.PHONY: help install build prepare pip-install dev update clean
+.PHONY: help install build prepare sync pip-install dev update clean
 
 help:
 	@echo "Targets:"
 	@echo "  install      - jlpm install"
 	@echo "  build        - jlpm run build"
 	@echo "  prepare      - copy labextension files"
-	@echo "  pip-install  - pip install -e ."
-	@echo "  update       - build + prepare + pip-install"
+	@echo "  sync         - copy labextension into Jupyter data dir"
+	@echo "  pip-install  - pip install . (force reinstall)"
+	@echo "  update       - build + prepare + sync"
 	@echo "  dev          - install + update"
 	@echo "  clean        - remove generated artifacts"
 
@@ -19,10 +20,13 @@ build:
 prepare:
 	./scripts/prepare_labextension.sh
 
-pip-install:
-	python -m pip install -e .
+sync:
+	./scripts/sync_labextension.py
 
-update: build prepare pip-install
+pip-install:
+	python -m pip install . --force-reinstall --no-deps
+
+update: build prepare sync
 
 dev: install update
 

@@ -15,3 +15,9 @@ dependencies = ["jupyterlab>=4.0.0"]
 [tool.hatch.build.targets.wheel.shared-data]
 "jupyterlab_trillia_theme/labextension" = "share/jupyter/labextensions/jupyterlab-trillia-theme"
 "jupyterlab_trillia_theme/install.json" = "share/jupyter/labextensions/jupyterlab-trillia-theme/install.json"
+
+[tool.hatch.build.targets.wheel]
+include = [
+  "jupyterlab_trillia_theme/install.json",
+  "jupyterlab_trillia_theme/labextension/**",
+]
