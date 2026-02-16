@@ -18,7 +18,7 @@
 
 @font-face {
   font-family: "BeeTreeSansText";
-  src: url("./beetree-sans-font/Display/WEB/BeeTreeSansText-Regular.woff2")
+  src: url("./beetree-sans-font/Text/WEB/BeeTreeSansText-Regular.woff2")
     format("woff2");
   font-style: normal;
   font-weight: 400;
@@ -27,7 +27,7 @@
 
 @font-face {
   font-family: "BeeTreeSansText";
-  src: url("./beetree-sans-font/Display/WEB/BeeTreeSansText-Bold.woff2")
+  src: url("./beetree-sans-font/Text/WEB/BeeTreeSansText-Bold.woff2")
     format("woff2");
   font-style: normal;
   font-weight: 700;

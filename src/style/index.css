@@ -3,6 +3,16 @@
 @import url("./variables.css");
 @import url("./icons.css");
 
+/* Markdown cell body text */
+.jp-RenderedHTMLCommon p,
+.jp-RenderedHTMLCommon li,
+.jp-RenderedHTMLCommon blockquote,
+.jp-RenderedHTMLCommon td,
+.jp-RenderedHTMLCommon th {
+  font-family: var(--trillia-font-family-body);
+  color: var(--trillia-dark);
+}
+
 /* Markdown cell headers */
 .jp-RenderedHTMLCommon h1,
 .jp-RenderedHTMLCommon h2,
