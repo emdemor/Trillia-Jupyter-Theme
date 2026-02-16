@@ -12,7 +12,6 @@
   "author": "Eduardo",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "style": "style/index.css",
   "files": [
     "lib/**/*.{js,d.ts,js.map}",
     "style/**/*"
