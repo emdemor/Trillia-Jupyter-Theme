@@ -12,14 +12,16 @@ RUN python -m pip install --upgrade pip \
 COPY . /workspace
 
 RUN python -m pip install . --no-deps \
+    && mkdir -p /usr/local/share/jupyter/labextensions/jupyterlab-trillia-theme \
+    && cp -r /workspace/jupyterlab_trillia_theme/labextension/* /usr/local/share/jupyter/labextensions/jupyterlab-trillia-theme/ \
+    && cp /workspace/jupyterlab_trillia_theme/install.json /usr/local/share/jupyter/labextensions/jupyterlab-trillia-theme/install.json \
+    && test -f /usr/local/share/jupyter/labextensions/jupyterlab-trillia-theme/static/remoteEntry*.js \
     && jupyter labextension list
 
 # Set Trillia as the default theme inside the image
 RUN mkdir -p /root/.jupyter/lab/user-settings/@jupyterlab/apputils-extension \
     && printf '%s\n' '{' \
-      '  "@jupyterlab/apputils-extension:themes": {' \
-      '    "theme": "Trillia"' \
-      '  }' \
+      '  "theme": "Trillia"' \
       '}' \
       > /root/.jupyter/lab/user-settings/@jupyterlab/apputils-extension/themes.jupyterlab-settings
 
