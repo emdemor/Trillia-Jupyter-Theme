@@ -6,91 +6,18 @@
   --trillia-blue-3: #2f73ff;
   --trillia-blue-4: #1d4ed8;
 
-  --trillia-mist: #e0f1ef;
-  --trillia-lime: #83fb71;
-  --trillia-lime-2: #37b32c;
-  --trillia-indigo: #1b1b96;
-  --trillia-dark: #001827;
-  --trillia-light: #f7f7f7;
-  --trillia-light-gray: #e5f0f0;
-
-  --trillia-font-family-heading: "BeeTreeSans", "Segoe UI", "Helvetica Neue",
-    Arial, sans-serif;
-  --trillia-font-family-body: "BeeTreeSansText", "Segoe UI", "Helvetica Neue",
-    Arial, sans-serif;
-
+  --trillia-font-text: "B3 Sans Text", "Manrope", "Avenir Next", "Segoe UI", Helvetica, Arial, sans-serif;
+  --trillia-font-display: "B3 Sans Display", "Manrope", "Avenir Next", "Segoe UI", Helvetica, Arial, sans-serif;
 
   --jp-brand-color0: var(--trillia-blue-4);
   --jp-brand-color1: var(--trillia-blue-3);
   --jp-brand-color2: var(--trillia-blue-2);
+
   --jp-accent-color0: var(--trillia-blue-4);
 
-  --jp-layout-color0: var(--trillia-light);
+  --jp-ui-font-family: var(--trillia-font-text);
+  --jp-content-font-family: var(--trillia-font-text);
 
-  --jp-editor-background: var(--trillia-light-gray);
-  --jp-editor-cursor-color: var(--trillia-blue-4);
-  /*--jp-inverse-layout-color3: var(--trillia-dark); /*cor dos ícones*/
-  /* --jp-cell-editor-active-border-color: var(--trillia-lime); */
-
-
-
-  --jp-cell-padding: 5px;
-  --jp-cell-collapser-width: 8px;
-  --jp-cell-collapser-min-height: 20px;
-  --jp-cell-collapser-not-active-hover-opacity: 0.6;
-  --jp-cell-editor-background: var(--trillia-light);
-  --jp-cell-editor-box-shadow: inset 0 0 4px rgb(var(--trillia-lime) / 0.4);
-  --jp-code-font-family: "JetBrains Mono", monospace;
-
-  /* --jp-rendermime-error-background: cor do background do output de erro */
-  
-  /* Cor do texto do output de erro */
-  /* --jp-rendermime-error-color: #ff0000; */
-  /* .jp-RenderedText pre .ansi-red-fg {
-    color: #0f9f4abd;
-  } */
-
-
-  /* Acentos (mude só isso pra “trocar de tema”) */
-  --hl-accent: #eb2525;     /* azul moderno */
-  --hl-accent-2: #7c3aed;   /* roxo/indigo */
-
-  /* Neutros */
-  --hl-fg: #0f172a;         /* texto principal */
-  --hl-fg-2: #334155;       /* secundário */
-  --hl-muted: #64748b;      /* comentário */
-  --hl-border: rgb(15 23 42 / 0.10);
-
-  /* Literais */
-  --hl-string: var(--trillia-blue-2);     /* teal sofisticado */
-  --hl-number: var(--trillia-lime-2);     /* âmbar queimado */
-  --hl-const:  #7c3aed;     /* const/builtin */
-
-  /* Feedback */
-  --hl-error: #dc2626;
-  --hl-warning: #d97706;
-
-  /* ===== TOKENS (JupyterLab vars) ===== */
-  --jp-mirror-editor-keyword-color:   var(--trillia-blue-4);   /* if, import, try */
-  --jp-mirror-editor-def-color:       var(--trillia-indigo);       /* nome de defs: discreto e “pro” */
-  --jp-mirror-editor-variable-color:  var(--trillia-blue-3);       /* identificadores */
-  --jp-mirror-editor-builtin-color:   var(--trillia-blue-3);    /* True/None/print */
-  --jp-mirror-editor-number-color:    var(--hl-number);   /* 123 */
-  --jp-mirror-editor-string-color:    var(--hl-string);   /* "texto" */
-  --jp-mirror-editor-string-2-color:    var(--hl-string);   /* "texto" */
-  --jp-mirror-editor-comment-color:   var(--hl-muted);    /* # comentário */
-  --jp-mirror-editor-operator-color:  var(--trillia-blue-3);     /* = + - */
-
-  --jp-mirror-editor-tag-color:       var(--hl-accent);
-  --jp-mirror-editor-attribute-color: var(--trillia-blue-3);
-  --jp-mirror-editor-error-color:     var(--hl-error);
-
-  /* ===== INTERAÇÃO ===== */
-  --jp-editor-selected-background:        rgb(37 99 235 / 0.16);
-  --jp-editor-active-line-background:     rgb(15 23 42 / 0.035);
-  --jp-editor-matching-bracket-color:     rgb(37 99 235 / 0.22);
-
-  /* ==== OUTPUT DE ERRO ==== */
-  --jp-rendermime-error-background: #e1e1e1;
-
+  /* --jp-border-width: 1px;
+  --jp-border-radius: 10px; */
 }

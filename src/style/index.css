@@ -1,16 +1,53 @@
 @import url("@jupyterlab/theme-light-extension/style/theme.css");
-@import url("./fonts.css");
 @import url("./variables.css");
 @import url("./icons.css");
 
-/* Markdown cell body text */
-.jp-RenderedHTMLCommon p,
-.jp-RenderedHTMLCommon li,
-.jp-RenderedHTMLCommon blockquote,
-.jp-RenderedHTMLCommon td,
-.jp-RenderedHTMLCommon th {
-  font-family: var(--trillia-font-family-body);
-  color: var(--trillia-dark);
+@font-face {
+  font-family: "B3 Sans Display";
+  src: url("./assets/B3-sans-font/Display/WEB/B3SansDisplay-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "B3 Sans Display";
+  src: url("./assets/B3-sans-font/Display/WEB/B3SansDisplay-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "B3 Sans Text";
+  src: url("./assets/B3-sans-font/Text/WEB/B3SansText-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "B3 Sans Text";
+  src: url("./assets/B3-sans-font/Text/WEB/B3SansText-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "B3 Sans Text";
+  src: url("./assets/B3-sans-font/Text/WEB/B3SansText-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "B3 Sans Text";
+  src: url("./assets/B3-sans-font/Text/WEB/B3SansText-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 
 /* Markdown cell headers */
@@ -20,97 +57,6 @@
 .jp-RenderedHTMLCommon h4,
 .jp-RenderedHTMLCommon h5,
 .jp-RenderedHTMLCommon h6 {
-  font-family: var(--trillia-font-family-heading);
-  color: var(--trillia-blue-4);
-}
-
-/* Cor do ícone do notebook */
-.jp-notebook-icon-color[fill],
-.jp-notebook-icon-color {
-  fill: var(--trillia-blue-4)!important;
-}
-
-.jp-notebook-icon-color[stroke] {
-  stroke: var(--trillia-blue-4) !important;
-}
-
-
-/* Cor do ícone do terminal */
-.jp-RunningSessions-shutdownAll.jp-ToolbarButtonComponent {
-  color: var(--trillia-lime)  !important;
-}
-
-/* Base moderna para célula de input */
-/* Input editor: card moderno */
-.jp-InputArea-editor{
-  position: relative;
-  overflow: hidden !important;
-  border-radius: 12px !important;
-
-  border: 1px solid rgb(4 28 53 / 0.10) !important;
-
-  background: linear-gradient(
-    180deg,
-    rgb(255 255 255 / 0.98),
-    rgb(224 241 239 / 0.22)
-  ) !important;
-
-  box-shadow:
-    0 1px 2px rgb(4 28 53 / 0.05),
-    0 10px 28px rgb(4 28 53 / 0.04),
-    inset 0 1px 0 rgb(255 255 255 / 0.85) !important;
-
-  padding-top: 6px !important;
-}
-
-/* Ativo (editMode): ring + glow sutil */
-.jp-Notebook.jp-mod-editMode .jp-Cell.jp-mod-active .jp-InputArea-editor{
-  border: 1px solid rgb(0 78 255 / 0.22) !important;
-
-  box-shadow:
-    0 2px 2px rgba(1, 56, 116, 0.05),
-    0 12px 30px rgb(4 28 53 / 0.05),
-    0 0 0 2px rgb(0 78 255 / 0.08),     /* ring sutil */
-    inset 0 1px 0 rgb(255 255 255 / 0.70) !important;
-
-  background: linear-gradient(
-    180deg,
-    rgb(255 255 255 / 0.99),
-    rgb(224 241 239 / 0.26)
-  ) !important;
-}
-
-.jp-InputArea-editor::before{
-  content:"";
-  position:absolute;
-  left:0; right:0; top:0;
-  height:2px;
-  background: linear-gradient(90deg,
-    rgb(0 78 255 / 0.0),
-    rgb(0 78 255 / 0.35),
-    rgba(35, 245, 2, 0.35),
-    rgb(0 78 255 / 0.0)
-  );
-  pointer-events:none;
-}
-
-/* Cor da barra esquerda de seleção */
-.jp-Notebook .jp-Cell.jp-mod-active .jp-Collapser {
-    background: var(--trillia-blue-4) !important;
-}
-
-.jp-Notebook .jp-Cell.jp-mod-active .jp-Collapser:hover {
-    background: var(--trillia-indigo) !important;
-    opacity: 1;
-}
-
-/* =========================
-   1) Prompt [2]: (entrada e saída)
-   ========================= */
-.jp-InputPrompt {
-  color: var(--trillia-blue-4) !important;
-}
-
-.jp-OutputPrompt {
-  color: var(--trillia-lime) !important;
+  font-family: var(--trillia-font-display);
+  color: var(--jp-brand-color2);
 }
