@@ -1,4 +1,4 @@
-.PHONY: help install build prepare sync pip-install dev update clean docker-build start
+.PHONY: help install build prepare sync pip-install dev update clean docker-build start build-py publish publish-test
 
 help:
 	@echo "Targets:"
@@ -12,6 +12,9 @@ help:
 	@echo "  clean        - remove generated artifacts"
 	@echo "  docker-build - build JupyterLab 4.5.4 image with Trillia theme"
 	@echo "  start        - run container with examples mounted"
+	@echo "  build-py     - python build (sdist + wheel)"
+	@echo "  publish      - upload dist/* to PyPI (requires TWINE creds)"
+	@echo "  publish-test - upload dist/* to TestPyPI (requires TWINE creds)"
 
 install:
 	jlpm install
@@ -40,3 +43,15 @@ docker-build:
 
 start: update docker-build
 	docker run --rm -p 8888:8888 -v $(PWD)/examples:/workspace/examples trillia-jlab:4.5.4
+
+build-py:
+	python -m pip install --upgrade build
+	python -m build
+
+publish: build-py
+	python -m pip install --upgrade twine
+	python -m twine upload dist/*
+
+publish-test: build-py
+	python -m pip install --upgrade twine
+	python -m twine upload --repository testpypi dist/*
