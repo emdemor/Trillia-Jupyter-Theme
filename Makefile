@@ -19,7 +19,7 @@ help:
 install:
 	jlpm install
 
-build:
+build: install
 	jlpm run build
 
 prepare:
