@@ -58,5 +58,70 @@
 .jp-RenderedHTMLCommon h5,
 .jp-RenderedHTMLCommon h6 {
   font-family: var(--trillia-font-display);
-  color: var(--jp-brand-color2);
+  color: var(--trillia-blue-4) !important;
+}
+
+/* Texto “normal” no Markdown (sem afetar títulos) */
+.jp-RenderedHTMLCommon {
+  color: var(--trillia-body-text) !important;
+  font-family: var(--trillia-font-text) !important;
+}
+
+/* Cor do ícone do notebook */
+.jp-notebook-icon-color[fill],
+.jp-notebook-icon-color {
+  fill: var(--trillia-blue-4) !important;
+}
+
+.jp-notebook-icon-color[stroke] {
+  stroke: var(--trillia-blue-4) !important;
+}
+
+/* Cor de texto de enfase - sidebar*/
+.jp-RunningSessions-shutdownAll.jp-ToolbarButtonComponent {
+  color: var(--trillia-blue-3) !important;
+}
+
+/* Base moderna para célula de input */
+.jp-InputArea-editor {
+  padding-top: 5px !important;
+  border-radius: 5px !important;
+  color: var(--trillia-body-text) !important;
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--trillia-mist) 25%, var(--jp-layout-color1)) 0%,
+      color-mix(in srgb, var(--trillia-mist) 40%, var(--jp-layout-color1)) 100%
+    ) !important;
+}
+
+/* Texto dentro do editor (CodeMirror) */
+.jp-InputArea .cm-editor,
+.jp-InputArea .cm-content {
+  color: var(--trillia-body-text) !important;
+}
+
+/* Texto de saída (outputs) */
+.jp-OutputArea,
+.jp-OutputArea-output,
+.jp-OutputArea-output pre,
+.jp-OutputArea-output code,
+.jp-RenderedText,
+.jp-RenderedText pre {
+  color: var(--trillia-body-text) !important;
+}
+
+
+/* Aba padrão (mantém layout nativo; só arredonda e refina cores) */
+.jp-DockPanel .lm-TabBar-tab,
+.lm-DockPanel .lm-TabBar-tab {
+  border-top-left-radius: var(--trillia-tab-radius) !important;
+  border-top-right-radius: var(--trillia-tab-radius) !important;
+  background-clip: padding-box;
+  overflow: hidden;
+}
+
+.jp-DockPanel .lm-TabBar-tab:hover,
+.lm-DockPanel .lm-TabBar-tab:hover {
+  background: color-mix(in srgb, var(--trillia-lime) 92%, var(--trillia-blue-4)) !important;
 }

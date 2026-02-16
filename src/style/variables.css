@@ -1,10 +1,15 @@
 :root {
   /* base mínima para começar a customização */
-  --trillia-blue-0: #cfe0ff;
-  --trillia-blue-1: #9fbfff;
-  --trillia-blue-2: #6a9bff;
-  --trillia-blue-3: #2f73ff;
-  --trillia-blue-4: #1d4ed8;
+  --trillia-blue-0: #dbe7ff;
+  --trillia-blue-1: #bfd3ff;
+  --trillia-blue-2: #8eb2ff;
+  --trillia-blue-3: #4f86ff;
+  --trillia-blue-4: #004eff;
+  --trillia-body-text: #001728;
+
+  --trillia-mist: #e0f1ef;
+  --trillia-lime: #83fb71;
+  --trillia-indigo: #1b1b96;
 
   --trillia-font-text: "B3 Sans Text", "Manrope", "Avenir Next", "Segoe UI", Helvetica, Arial, sans-serif;
   --trillia-font-display: "B3 Sans Display", "Manrope", "Avenir Next", "Segoe UI", Helvetica, Arial, sans-serif;
@@ -17,6 +22,8 @@
 
   --jp-ui-font-family: var(--trillia-font-text);
   --jp-content-font-family: var(--trillia-font-text);
+
+  --trillia-tab-radius: 10px;
 
   /* --jp-border-width: 1px;
   --jp-border-radius: 10px; */
